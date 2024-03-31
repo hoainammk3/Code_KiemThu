@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -14,19 +15,19 @@ string Sponsor(int n)
     return "Nhà tài trợ kim cương";
 }
 
-int main()
+void KiemThuChucNang()
 {
     int num_testcase = 6;
     int count = 1;
     while (count <= num_testcase) {
-        string nameFile = "testcase" + to_string(count) + ".txt";
+        string nameFile = "KiemThuChucNang/testcase" + to_string(count) + ".txt";
         // Mở file "data.txt" để đọc
         ifstream file(nameFile);
         
         // Kiểm tra nếu file mở thành công
         if (!file.is_open()) {
             cout << "Error opening file!" << endl;
-            return 1;
+            return;
         }
 
         // Đọc 3 số thực từ file
@@ -42,6 +43,4 @@ int main()
         count++;
     }
     
-     
-    return 0;
 }
